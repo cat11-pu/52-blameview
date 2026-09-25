@@ -13,10 +13,10 @@ const base = blame(spec.commits, spec.file_lines);
 const grown = incremental(spec.commits, spec.file_lines, spec.moves || [], spec.from || 0);
 const view = render(spec);
 
-emit("每行的归属 =", JSON.stringify(base.owner));
-emit("认不出的提交 =", JSON.stringify(base.unknown));
-emit("检测到的移动区间 =", JSON.stringify(grown.moved));
-emit("需要重算的行 =", JSON.stringify(grown.reblamed));
+emit("每行的归属 =", base.owner);
+emit("认不出的提交 =", base.unknown);
+emit("检测到的移动区间 =", grown.moved);
+emit("需要重算的行 =", grown.reblamed);
 emit("增量是否与全量一致 =", view.consistent);
 emit("预算消耗 =", view.budget_used);
 emit("未知提交的错误码 =", spec.unknown_code);
