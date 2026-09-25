@@ -1,0 +1,16 @@
+{
+  "unknown_code": "E_UNKNOWN_COMMIT",
+  "from": 3,
+  "commits": [
+    {"id": "c0", "lines": ["header", "alpha", "beta"]},
+    {"id": "c1", "lines": ["header", "alpha", "beta", "gamma"]},
+    {"id": "c2", "lines": ["header", "beta", "gamma"]},
+    {"id": "c3", "lines": ["header", "gamma", "beta", "delta"]}
+  ],
+  "file_lines": ["header", "gamma", "beta", "delta"],
+  "moves": [
+    {"from": [2, 3], "to": [1, 2]},
+    {"from": [1, 2], "to": [2, 3]}
+  ],
+  "move_mode": "swap"
+}
